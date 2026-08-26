@@ -30,5 +30,11 @@ jobs:
         if: ${{ hashFiles('receipts/baton-relay.json') != '' }}
         run: npm run verify:relay
 
+      - name: Verify deterministic relay constellation
+        run: |
+          npm run render:relay
+          git diff --exit-code -- assets/baton-relay.svg
+          npm run verify:svg
+
       - name: Scan public tree and Git history for credential formats
         run: npm run audit:secrets

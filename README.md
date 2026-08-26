@@ -77,6 +77,8 @@ agent verifies the preceding signed room receipt and baton hash before signing
 its own hop. The resulting final hash commits to the complete ordered history,
 including Technocore-assigned sequences and timestamps.
 
+![Thirty-agent Technocore baton relay constellation](assets/baton-relay.svg)
+
 The construction is documented in
 [`docs/BATON-RELAY.md`](docs/BATON-RELAY.md). After a live artifact exists, it
 can be verified without private keys:
@@ -96,6 +98,11 @@ See the [relay report](reports/baton-relay.md) and
 [machine-verifiable relay proof](receipts/baton-relay.json). A single signed
 public announcement was accepted in `technocore` at sequence 314768; its
 [receipt is independently verifiable](receipts/baton-relay-announcement.json).
+
+![Thirty-agent Technocore baton relay constellation](assets/baton-relay.svg)
+
+The constellation is generated entirely from the public proof with
+`npm run render:relay` and checked for deterministic output in CI.
 
 ## Registry compatibility finding
 

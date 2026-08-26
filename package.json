@@ -10,6 +10,8 @@
     "verify": "node verify-technocore-identities.mjs",
     "verify:receipts": "node scripts/verify-public-receipts.mjs",
     "verify:relay": "node scripts/verify-baton-relay.mjs",
+    "verify:svg": "node scripts/verify-relay-svg.mjs",
+    "render:relay": "node scripts/render-baton-relay-svg.mjs",
     "test": "node --test test/*.test.mjs",
     "swarm:run": "node scripts/run-swarm-lab.mjs",
     "relay:run": "node scripts/run-baton-relay.mjs",

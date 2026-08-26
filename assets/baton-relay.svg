@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Technocore 30-agent cryptographic baton relay</title>
+  <desc id="desc">Thirty disclosed agent DIDs form a signed hash chain around the final baton.</desc>
+  <metadata>relay=20260826133646 operator=RaffiHu room=d-raffihu-swarm-lab final_baton=97f3a48d621ce1cfb10b11c5747bcc84ea8e8a7c7f8919d9f806b651725c0d57</metadata>
+  <defs>
+    <radialGradient id="background"><stop offset="0" stop-color="#18253f"/><stop offset="1" stop-color="#070b14"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#53657f"/></marker>
+    <marker id="gold-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ffd670"/></marker>
+    <style>
+      .relay-line{stroke:#53657f;stroke-width:2;fill:none;opacity:.75}
+      .genesis-line{stroke:#70d6ff;stroke-width:2;fill:none;opacity:.8}.summary-line{stroke:#ffd670;stroke-width:3;fill:none;opacity:.9}
+      text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;text-anchor:middle;fill:#eef6ff}
+      .agent-label{font-size:20px;font-weight:700}.seq-label{font-size:11px;fill:#a8b8d0}.did-label{font-size:10px;fill:#71829d}
+      .eyebrow{font-size:16px;letter-spacing:4px;fill:#70d6ff}.headline{font-size:30px;font-weight:700}.hash{font-size:17px;fill:#ffd670}
+      .footer{font-size:13px;fill:#8fa3bf}
+    </style>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#background)" rx="36"/>
+  <circle cx="600" cy="600" r="500" fill="none" stroke="#1c2a42" stroke-width="1"/>
+  <path d="M 600 410 L 600.00 145.00" class="genesis-line" marker-end="url(#arrow)"/>
+  <path d="M 600.00 145.00 L 694.60 154.94" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 694.60 154.94 L 785.07 184.34" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 785.07 184.34 L 867.44 231.90" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 867.44 231.90 L 938.13 295.55" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 938.13 295.55 L 994.04 372.50" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 994.04 372.50 L 1032.73 459.40" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 1032.73 459.40 L 1052.51 552.44" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 1052.51 552.44 L 1052.51 647.56" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 1052.51 647.56 L 1032.73 740.60" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 1032.73 740.60 L 994.04 827.50" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 994.04 827.50 L 938.13 904.45" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 938.13 904.45 L 867.44 968.10" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 867.44 968.10 L 785.07 1015.66" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 785.07 1015.66 L 694.60 1045.06" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 694.60 1045.06 L 600.00 1055.00" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 600.00 1055.00 L 505.40 1045.06" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 505.40 1045.06 L 414.93 1015.66" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 414.93 1015.66 L 332.56 968.10" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 332.56 968.10 L 261.87 904.45" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 261.87 904.45 L 205.96 827.50" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 205.96 827.50 L 167.27 740.60" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 167.27 740.60 L 147.49 647.56" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 147.49 647.56 L 147.49 552.44" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 147.49 552.44 L 167.27 459.40" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 167.27 459.40 L 205.96 372.50" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 205.96 372.50 L 261.87 295.55" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 261.87 295.55 L 332.56 231.90" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 332.56 231.90 L 414.93 184.34" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 414.93 184.34 L 505.40 154.94" class="relay-line" marker-end="url(#arrow)"/>
+  <path d="M 505.40 154.94 L 410 600" class="summary-line" marker-end="url(#gold-arrow)"/>
+  <circle cx="600" cy="600" r="190" fill="#0b1220" stroke="#ffd670" stroke-width="3" filter="url(#glow)"/>
+  <text class="eyebrow" x="600" y="480">FINAL BATON</text>
+  <text class="headline" x="600" y="520">30 / 30 HOPS</text>
+  <text class="hash" x="600" y="555">97f3a48d621ce1cf</text>
+<text class="hash" x="600" y="579">b10b11c5747bcc84</text>
+<text class="hash" x="600" y="603">ea8e8a7c7f8919d9</text>
+<text class="hash" x="600" y="627">f806b651725c0d57</text>
+  <text class="footer" x="600" y="680">relay 20260826133646 · sequences 32–61</text>
+  <text class="footer" x="600" y="705">one disclosed operator · thirty independently signing keys</text>
+  <g class="agent" transform="translate(600.00 145.00)">
+    <circle r="42" fill="#111827" stroke="#70d6ff" stroke-width="5"/>
+    <text class="agent-label" y="-5">01</text>
+    <text class="seq-label" y="17">seq 32</text>
+    <text class="did-label" y="60">…4k5g1u</text>
+    <title>Agent 01 · coordinator-and-disclosure-publisher · did:key:z6MkpnZc4Mik1jQma4iEPQUPzU6e6TYy35vBUXGzqL4k5g1u</title>
+  </g>
+  <g class="agent" transform="translate(694.60 154.94)">
+    <circle r="42" fill="#111827" stroke="#70d6ff" stroke-width="5"/>
+    <text class="agent-label" y="-5">02</text>
+    <text class="seq-label" y="17">seq 33</text>
+    <text class="did-label" y="60">…8ayd26</text>
+    <title>Agent 02 · sharded-registry-auditor-01 · did:key:z6MktBYSzcUzELPVqvsPZyaugPpExxzFJzoRADJkxf8ayd26</title>
+  </g>
+  <g class="agent" transform="translate(785.07 184.34)">
+    <circle r="42" fill="#111827" stroke="#70d6ff" stroke-width="5"/>
+    <text class="agent-label" y="-5">03</text>
+    <text class="seq-label" y="17">seq 34</text>
+    <text class="did-label" y="60">…Mp7v5k</text>
+    <title>Agent 03 · sharded-registry-auditor-02 · did:key:z6MkuAs3A5HkAABER5pzyRcwspzi73pPkQN52hnnKnMp7v5k</title>
+  </g>
+  <g class="agent" transform="translate(867.44 231.90)">
+    <circle r="42" fill="#111827" stroke="#70d6ff" stroke-width="5"/>
+    <text class="agent-label" y="-5">04</text>
+    <text class="seq-label" y="17">seq 35</text>
+    <text class="did-label" y="60">…e72QMi</text>
+    <title>Agent 04 · sharded-registry-auditor-03 · did:key:z6Mkk5hoU7b91ekoYFBEz95AJnorxNKPtm8r3pTEzae72QMi</title>
+  </g>
+  <g class="agent" transform="translate(938.13 295.55)">
+    <circle r="42" fill="#111827" stroke="#70d6ff" stroke-width="5"/>
+    <text class="agent-label" y="-5">05</text>
+    <text class="seq-label" y="17">seq 36</text>
+    <text class="did-label" y="60">…hupXDq</text>
+    <title>Agent 05 · sharded-registry-auditor-04 · did:key:z6MkvGF2GWj8NcmBYXg6Hwnu7u66rDK2sDWXUi3bY4hupXDq</title>
+  </g>
+  <g class="agent" transform="translate(994.04 372.50)">
+    <circle r="42" fill="#111827" stroke="#ff70a6" stroke-width="5"/>
+    <text class="agent-label" y="-5">06</text>
+    <text class="seq-label" y="17">seq 37</text>
+    <text class="did-label" y="60">…ubJkaH</text>
+    <title>Agent 06 · sharded-registry-auditor-05 · did:key:z6Mkwd6EQ2XM6cpcDUFUpSz8kwbXn4PBoc8R5R9GtyubJkaH</title>
+  </g>
+  <g class="agent" transform="translate(1032.73 459.40)">
+    <circle r="42" fill="#111827" stroke="#ff70a6" stroke-width="5"/>
+    <text class="agent-label" y="-5">07</text>
+    <text class="seq-label" y="17">seq 38</text>
+    <text class="did-label" y="60">…VL14vk</text>
+    <title>Agent 07 · ed25519-did-verifier-01 · did:key:z6MkmG6xSdesvWt2HjJUxeuxbq6zxTHNgPpusMqVC8VL14vk</title>
+  </g>
+  <g class="agent" transform="translate(1052.51 552.44)">
+    <circle r="42" fill="#111827" stroke="#ff70a6" stroke-width="5"/>
+    <text class="agent-label" y="-5">08</text>
+    <text class="seq-label" y="17">seq 39</text>
+    <text class="did-label" y="60">…iSPo2T</text>
+    <title>Agent 08 · ed25519-did-verifier-02 · did:key:z6Mkr5SAHVP66Wms7iECRzJtz5WAMCKjpRgbBAMXvziSPo2T</title>
+  </g>
+  <g class="agent" transform="translate(1052.51 647.56)">
+    <circle r="42" fill="#111827" stroke="#ff70a6" stroke-width="5"/>
+    <text class="agent-label" y="-5">09</text>
+    <text class="seq-label" y="17">seq 40</text>
+    <text class="did-label" y="60">…DBBCyi</text>
+    <title>Agent 09 · ed25519-did-verifier-03 · did:key:z6MkfEet8bN9Zb58JfV1Mz8K85a6cZP7e3H3f75D7zDBBCyi</title>
+  </g>
+  <g class="agent" transform="translate(1032.73 740.60)">
+    <circle r="42" fill="#111827" stroke="#ff70a6" stroke-width="5"/>
+    <text class="agent-label" y="-5">10</text>
+    <text class="seq-label" y="17">seq 41</text>
+    <text class="did-label" y="60">…tWNgqE</text>
+    <title>Agent 10 · ed25519-did-verifier-04 · did:key:z6Mko2QgCJ2ygZ3dg4q89hX55K1r1bLXdBa1GAoHuQtWNgqE</title>
+  </g>
+  <g class="agent" transform="translate(994.04 827.50)">
+    <circle r="42" fill="#111827" stroke="#ff9770" stroke-width="5"/>
+    <text class="agent-label" y="-5">11</text>
+    <text class="seq-label" y="17">seq 42</text>
+    <text class="did-label" y="60">…SuFE26</text>
+    <title>Agent 11 · ed25519-did-verifier-05 · did:key:z6MkvyFErwCUQLNmrZx16QYZDGFtyMKVnFXdSyoi9vSuFE26</title>
+  </g>
+  <g class="agent" transform="translate(938.13 904.45)">
+    <circle r="42" fill="#111827" stroke="#ff9770" stroke-width="5"/>
+    <text class="agent-label" y="-5">12</text>
+    <text class="seq-label" y="17">seq 43</text>
+    <text class="did-label" y="60">…8PCiFH</text>
+    <title>Agent 12 · room-cursor-reviewer-limit-1 · did:key:z6MkuzcShxAYzB2u6QX9YF95cgPPnnKujn4KcihJxj8PCiFH</title>
+  </g>
+  <g class="agent" transform="translate(867.44 968.10)">
+    <circle r="42" fill="#111827" stroke="#ff9770" stroke-width="5"/>
+    <text class="agent-label" y="-5">13</text>
+    <text class="seq-label" y="17">seq 44</text>
+    <text class="did-label" y="60">…M6pd9a</text>
+    <title>Agent 13 · room-cursor-reviewer-limit-5 · did:key:z6MkpN367qgE9jT4reL4VensLb2cLeKbAZok2FSkz2M6pd9a</title>
+  </g>
+  <g class="agent" transform="translate(785.07 1015.66)">
+    <circle r="42" fill="#111827" stroke="#ff9770" stroke-width="5"/>
+    <text class="agent-label" y="-5">14</text>
+    <text class="seq-label" y="17">seq 45</text>
+    <text class="did-label" y="60">…LF6S9C</text>
+    <title>Agent 14 · room-cursor-reviewer-limit-50 · did:key:z6MkqZReYLBR4RMxNFFLXWRGG2G3Nzy2DaMWtaQM9JLF6S9C</title>
+  </g>
+  <g class="agent" transform="translate(694.60 1045.06)">
+    <circle r="42" fill="#111827" stroke="#ff9770" stroke-width="5"/>
+    <text class="agent-label" y="-5">15</text>
+    <text class="seq-label" y="17">seq 46</text>
+    <text class="did-label" y="60">…6ua7Zh</text>
+    <title>Agent 15 · room-cursor-reviewer-limit-200 · did:key:z6Mki1LNK15BbW1FbK1Hofd2Sno6tLHW8cGq8rqdLb6ua7Zh</title>
+  </g>
+  <g class="agent" transform="translate(600.00 1055.00)">
+    <circle r="42" fill="#111827" stroke="#ffd670" stroke-width="5"/>
+    <text class="agent-label" y="-5">16</text>
+    <text class="seq-label" y="17">seq 47</text>
+    <text class="did-label" y="60">…eummED</text>
+    <title>Agent 16 · owned-room-authorization-reviewer-01 · did:key:z6MkgRs9HnF28aSegsryMuhRaEw5WWe7bKnykDw92heummED</title>
+  </g>
+  <g class="agent" transform="translate(505.40 1045.06)">
+    <circle r="42" fill="#111827" stroke="#ffd670" stroke-width="5"/>
+    <text class="agent-label" y="-5">17</text>
+    <text class="seq-label" y="17">seq 48</text>
+    <text class="did-label" y="60">…MoTnkE</text>
+    <title>Agent 17 · owned-room-authorization-reviewer-02 · did:key:z6MkjEresHc6wtXiBytbV2MXDyeLMWu6xU9NAtMBiuMoTnkE</title>
+  </g>
+  <g class="agent" transform="translate(414.93 1015.66)">
+    <circle r="42" fill="#111827" stroke="#ffd670" stroke-width="5"/>
+    <text class="agent-label" y="-5">18</text>
+    <text class="seq-label" y="17">seq 49</text>
+    <text class="did-label" y="60">…fpvULg</text>
+    <title>Agent 18 · owned-room-authorization-reviewer-03 · did:key:z6MkmrmjkA4fSAXjGVh1QYErLf2FGDXpsVjC2QAgJrfpvULg</title>
+  </g>
+  <g class="agent" transform="translate(332.56 968.10)">
+    <circle r="42" fill="#111827" stroke="#ffd670" stroke-width="5"/>
+    <text class="agent-label" y="-5">19</text>
+    <text class="seq-label" y="17">seq 50</text>
+    <text class="did-label" y="60">…pdGR9s</text>
+    <title>Agent 19 · owned-room-authorization-reviewer-04 · did:key:z6MkttUDcksge62CUsZegbTmMsGkVsQAYAJ3GAUjzwpdGR9s</title>
+  </g>
+  <g class="agent" transform="translate(261.87 904.45)">
+    <circle r="42" fill="#111827" stroke="#ffd670" stroke-width="5"/>
+    <text class="agent-label" y="-5">20</text>
+    <text class="seq-label" y="17">seq 51</text>
+    <text class="did-label" y="60">…RQM7Ms</text>
+    <title>Agent 20 · documentation-compatibility-reviewer-01 · did:key:z6MkfL6spHNrkcaznjYwXW6cZzBF5r4F8Lj8Ht6NfkRQM7Ms</title>
+  </g>
+  <g class="agent" transform="translate(205.96 827.50)">
+    <circle r="42" fill="#111827" stroke="#8cff98" stroke-width="5"/>
+    <text class="agent-label" y="-5">21</text>
+    <text class="seq-label" y="17">seq 52</text>
+    <text class="did-label" y="60">…eeVfpj</text>
+    <title>Agent 21 · documentation-compatibility-reviewer-02 · did:key:z6MkmCacCbxm3XNnSw4tikdEC8aVhbcPjjppZ1qWUJeeVfpj</title>
+  </g>
+  <g class="agent" transform="translate(167.27 740.60)">
+    <circle r="42" fill="#111827" stroke="#8cff98" stroke-width="5"/>
+    <text class="agent-label" y="-5">22</text>
+    <text class="seq-label" y="17">seq 53</text>
+    <text class="did-label" y="60">…CLpcS6</text>
+    <title>Agent 22 · documentation-compatibility-reviewer-03 · did:key:z6Mkwah9v2xQxvi8biBnmN9MLyKUkD1UAxS91D29MUCLpcS6</title>
+  </g>
+  <g class="agent" transform="translate(147.49 647.56)">
+    <circle r="42" fill="#111827" stroke="#8cff98" stroke-width="5"/>
+    <text class="agent-label" y="-5">23</text>
+    <text class="seq-label" y="17">seq 54</text>
+    <text class="did-label" y="60">…X6bvaP</text>
+    <title>Agent 23 · documentation-compatibility-reviewer-04 · did:key:z6MkiqdURsgS7yBWc9BN9ykgmhiuskBhjxQdcGDEfrX6bvaP</title>
+  </g>
+  <g class="agent" transform="translate(147.49 552.44)">
+    <circle r="42" fill="#111827" stroke="#8cff98" stroke-width="5"/>
+    <text class="agent-label" y="-5">24</text>
+    <text class="seq-label" y="17">seq 55</text>
+    <text class="did-label" y="60">…wPx9eU</text>
+    <title>Agent 24 · receipt-integrity-reviewer-01 · did:key:z6MkeoT1pC4n4yr7TFrpYtCKMVjZ6W6FHAMv6ERFgcwPx9eU</title>
+  </g>
+  <g class="agent" transform="translate(167.27 459.40)">
+    <circle r="42" fill="#111827" stroke="#8cff98" stroke-width="5"/>
+    <text class="agent-label" y="-5">25</text>
+    <text class="seq-label" y="17">seq 56</text>
+    <text class="did-label" y="60">…YPJExS</text>
+    <title>Agent 25 · receipt-integrity-reviewer-02 · did:key:z6MkgPr2nzJ8DGtWfnhxTSCvp4rRSpTiQyooFmKTbNYPJExS</title>
+  </g>
+  <g class="agent" transform="translate(205.96 372.50)">
+    <circle r="42" fill="#111827" stroke="#b392f0" stroke-width="5"/>
+    <text class="agent-label" y="-5">26</text>
+    <text class="seq-label" y="17">seq 57</text>
+    <text class="did-label" y="60">…Erw52E</text>
+    <title>Agent 26 · receipt-integrity-reviewer-03 · did:key:z6MkjznWah5kExBBqSpa7Een7bnWMr3Kx2SaeGSVHjErw52E</title>
+  </g>
+  <g class="agent" transform="translate(261.87 295.55)">
+    <circle r="42" fill="#111827" stroke="#b392f0" stroke-width="5"/>
+    <text class="agent-label" y="-5">27</text>
+    <text class="seq-label" y="17">seq 58</text>
+    <text class="did-label" y="60">…aaCM1i</text>
+    <title>Agent 27 · receipt-integrity-reviewer-04 · did:key:z6MkfDX57VJftvy93KAWPA2c72GxiCFkQZTh1Mcr2maaCM1i</title>
+  </g>
+  <g class="agent" transform="translate(332.56 231.90)">
+    <circle r="42" fill="#111827" stroke="#b392f0" stroke-width="5"/>
+    <text class="agent-label" y="-5">28</text>
+    <text class="seq-label" y="17">seq 59</text>
+    <text class="did-label" y="60">…u2znFF</text>
+    <title>Agent 28 · independent-aggregate-reviewer-01 · did:key:z6MkkYqAh8JdUxgFNQPcorUUgZzrLPEqE2kEmRrT7du2znFF</title>
+  </g>
+  <g class="agent" transform="translate(414.93 184.34)">
+    <circle r="42" fill="#111827" stroke="#b392f0" stroke-width="5"/>
+    <text class="agent-label" y="-5">29</text>
+    <text class="seq-label" y="17">seq 60</text>
+    <text class="did-label" y="60">…C8uWDL</text>
+    <title>Agent 29 · independent-aggregate-reviewer-02 · did:key:z6MkeztqaLYgqucQjFgvEmzKTWhxthE7iNvDfpB4oUC8uWDL</title>
+  </g>
+  <g class="agent" transform="translate(505.40 154.94)">
+    <circle r="42" fill="#111827" stroke="#b392f0" stroke-width="5"/>
+    <text class="agent-label" y="-5">30</text>
+    <text class="seq-label" y="17">seq 61</text>
+    <text class="did-label" y="60">…3KgbxY</text>
+    <title>Agent 30 · release-attestor · did:key:z6MkkEW1ohSzDCLwuGexJJrS79c2kjK3ctfreezFSD3KgbxY</title>
+  </g>
+</svg>
