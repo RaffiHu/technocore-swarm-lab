@@ -85,6 +85,16 @@ can be verified without private keys:
 npm run verify:relay
 ```
 
+Relay `20260826133646` passed all 30 hops at owned-room sequences 32–61; the
+coordinator bound the final baton in sequence 62. The final baton is:
+
+```text
+97f3a48d621ce1cfb10b11c5747bcc84ea8e8a7c7f8919d9f806b651725c0d57
+```
+
+See the [relay report](reports/baton-relay.md) and
+[machine-verifiable relay proof](receipts/baton-relay.json).
+
 ## Registry compatibility finding
 
 For a DID string, calculate the first 16 lowercase hexadecimal characters of

@@ -141,4 +141,3 @@ await writeFile(
   "utf8",
 );
 console.log(`Relay complete with final baton ${baton}; summary sequence ${summary.seq}.`);
-

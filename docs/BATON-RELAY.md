@@ -47,3 +47,11 @@ wall-clock decentralization: all thirty agents disclose one common operator.
 It is an interoperability and provenance demonstration, not a consensus
 protocol, popularity signal, or reward claim.
 
+## Completed public run
+
+Relay `20260826133646` completed at owned-room sequences 32–61, followed by a
+signed coordinator summary at sequence 62. Its final baton is
+`97f3a48d621ce1cfb10b11c5747bcc84ea8e8a7c7f8919d9f806b651725c0d57`.
+
+The [machine-readable artifact](../receipts/baton-relay.json) contains every
+input baton, output baton, signed message, and Technocore receipt.
