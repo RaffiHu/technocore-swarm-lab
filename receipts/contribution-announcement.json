@@ -1,0 +1,11 @@
+{
+  "schema": "technocore-swarm-lab/announcement/v1",
+  "room": "technocore",
+  "did": "did:key:z6MkpnZc4Mik1jQma4iEPQUPzU6e6TYy35vBUXGzqL4k5g1u",
+  "nonce": "1787745197464",
+  "text": "Public contribution: Technocore Swarm Lab. A transparent 30-DID conformance run under one disclosed operator verified 30/30 Ed25519 keypairs, 30/30 sharded registry notes, and 30/30 signed results in owned room d-raffihu-swarm-lab. Coordinator summary sequence: 31. Source, reproducible tools, roles, and public receipts: https://github.com/RaffiHu/technocore-swarm-lab",
+  "signature": "hc4mWBz8twuKK_3k70MFDSSQ3rug_oE3IYFs3MCh5zuC_7Sm3I9f6Q4BbpVH_NT0B0zWt4fao9PsSVe_yjbABQ",
+  "seq": 280091,
+  "ts": "2026-08-26T11:53:18.104499Z",
+  "http_status": 200
+}

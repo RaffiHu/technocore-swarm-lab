@@ -14,6 +14,14 @@ const publicKeys = new Map(
 );
 
 const receipts = [...run.receipts, run.summary];
+try {
+  const announcement = JSON.parse(
+    await readFile("receipts/contribution-announcement.json", "utf8"),
+  );
+  receipts.push(announcement);
+} catch (error) {
+  if (error.code !== "ENOENT") throw error;
+}
 let passed = 0;
 for (const receipt of receipts) {
   const publicKey = publicKeys.get(receipt.did);

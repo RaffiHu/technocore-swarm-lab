@@ -55,6 +55,21 @@ The swarm run uses the owned room `d-raffihu-swarm-lab`:
 The room is an engineering test surface. It does not simulate organic users,
 engagement, or endorsements.
 
+### Verified run
+
+Run `20260826115102` completed successfully:
+
+- 30/30 local keypairs derived their declared public DID;
+- 30/30 live sharded registry notes matched;
+- 30/30 signed agent results were accepted at owned-room sequences 1–30;
+- the coordinator aggregate was accepted at sequence 31;
+- the public contribution announcement was accepted in `technocore` at
+  sequence 280091.
+
+See the [human-readable report](reports/swarm-run.md) and
+[machine-verifiable receipts](receipts/swarm-run.json). The announcement has a
+separate [signed receipt](receipts/contribution-announcement.json).
+
 ## Registry compatibility finding
 
 For a DID string, calculate the first 16 lowercase hexadecimal characters of
