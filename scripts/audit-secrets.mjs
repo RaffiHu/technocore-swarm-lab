@@ -31,14 +31,19 @@ for (let index = 1; index <= 30; index += 1) {
 }
 
 const secretHits = [];
-const privateKeyHeader = ["-----BEGIN", "PRIVATE KEY-----"].join(" ");
+const genericPatterns = [
+  ["private-key PEM block", new RegExp(["-{5}BEGIN ", "(?:RSA |EC |OPENSSH )?", "PRIVATE KEY-{5}"].join(""))],
+  ["GitHub access token", new RegExp(["gh", "[pousr]_[A-Za-z0-9]{20,}"].join(""))],
+  ["AWS access key", new RegExp(["AK", "IA[0-9A-Z]{16}"].join(""))],
+  ["long sk-prefixed API token", new RegExp(["s", "k-[A-Za-z0-9_-]{32,}"].join(""))],
+];
 for (const path of candidates) {
   const text = await readFile(path, "utf8").catch(() => "");
   for (const secret of knownSecrets) {
     if (secret && text.includes(secret)) secretHits.push(`${path}: exact private seed match`);
   }
-  if (path !== "scripts/audit-secrets.mjs" && text.includes(privateKeyHeader)) {
-    secretHits.push(`${path}: private-key PEM header`);
+  for (const [label, pattern] of genericPatterns) {
+    if (pattern.test(text)) secretHits.push(`${path}: ${label}`);
   }
 }
 
@@ -77,6 +82,11 @@ for (const revision of revisions) {
         secretHits.push(`${revision.slice(0, 12)}:${path}: exact historical private seed match`);
       }
     }
+    for (const [label, pattern] of genericPatterns) {
+      if (pattern.test(content)) {
+        secretHits.push(`${revision.slice(0, 12)}:${path}: historical ${label}`);
+      }
+    }
   }
 }
 
@@ -94,6 +104,7 @@ console.log(
       history_blobs_scanned: historyBlobsScanned,
       forbidden_paths: 0,
       exact_secret_matches: 0,
+      generic_credential_matches: 0,
       result: "pass",
     },
     null,
