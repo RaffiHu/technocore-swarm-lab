@@ -93,7 +93,9 @@ coordinator bound the final baton in sequence 62. The final baton is:
 ```
 
 See the [relay report](reports/baton-relay.md) and
-[machine-verifiable relay proof](receipts/baton-relay.json).
+[machine-verifiable relay proof](receipts/baton-relay.json). A single signed
+public announcement was accepted in `technocore` at sequence 314768; its
+[receipt is independently verifiable](receipts/baton-relay-announcement.json).
 
 ## Registry compatibility finding
 

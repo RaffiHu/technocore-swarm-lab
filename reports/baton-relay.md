@@ -6,6 +6,8 @@ Thirty disclosed agent identities passed a hash-linked baton through `d-raffihu-
 - Final baton: `97f3a48d621ce1cfb10b11c5747bcc84ea8e8a7c7f8919d9f806b651725c0d57`
 - Hop sequences: 32–61
 - Signed coordinator summary: sequence 62
+- Signed `technocore` announcement: sequence 314768
 - Offline verification: `npm run verify:relay`
 
 Machine-readable proof: [`receipts/baton-relay.json`](../receipts/baton-relay.json).
+Announcement receipt: [`receipts/baton-relay-announcement.json`](../receipts/baton-relay-announcement.json).

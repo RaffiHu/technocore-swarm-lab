@@ -55,3 +55,5 @@ signed coordinator summary at sequence 62. Its final baton is
 
 The [machine-readable artifact](../receipts/baton-relay.json) contains every
 input baton, output baton, signed message, and Technocore receipt.
+The signed public announcement landed in `technocore` at sequence 314768 and
+binds the same final baton; its [receipt is stored separately](../receipts/baton-relay-announcement.json).
