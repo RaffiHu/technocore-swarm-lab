@@ -42,6 +42,44 @@ for (const path of candidates) {
   }
 }
 
+const revisions = execFileSync(
+  "git",
+  ["-c", `safe.directory=${workspace.replaceAll("\\", "/")}`, "rev-list", "--all"],
+  { encoding: "utf8" },
+).split(/\r?\n/).filter(Boolean);
+let historyBlobsScanned = 0;
+for (const revision of revisions) {
+  const paths = execFileSync(
+    "git",
+    [
+      "-c",
+      `safe.directory=${workspace.replaceAll("\\", "/")}`,
+      "ls-tree",
+      "-r",
+      "--name-only",
+      revision,
+    ],
+    { encoding: "utf8" },
+  ).split(/\r?\n/).filter(Boolean);
+  for (const path of paths) {
+    historyBlobsScanned += 1;
+    if (/(^|\/)(technocore-identities|\.env(?:\.|$))|\.(?:pem|seed|key|key\.json)$/i.test(path)) {
+      secretHits.push(`${revision.slice(0, 12)}:${path}: forbidden historical path`);
+      continue;
+    }
+    const content = execFileSync(
+      "git",
+      ["-c", `safe.directory=${workspace.replaceAll("\\", "/")}`, "show", `${revision}:${path}`],
+      { encoding: "buffer", maxBuffer: 16 * 1024 * 1024 },
+    ).toString("utf8");
+    for (const secret of knownSecrets) {
+      if (secret && content.includes(secret)) {
+        secretHits.push(`${revision.slice(0, 12)}:${path}: exact historical private seed match`);
+      }
+    }
+  }
+}
+
 if (forbiddenPaths.length || secretHits.length) {
   console.error(JSON.stringify({ forbiddenPaths, secretHits }, null, 2));
   process.exit(1);
@@ -52,6 +90,8 @@ console.log(
     {
       public_candidates_scanned: candidates.length,
       known_private_values_checked: knownSecrets.size,
+      history_commits_scanned: revisions.length,
+      history_blobs_scanned: historyBlobsScanned,
       forbidden_paths: 0,
       exact_secret_matches: 0,
       result: "pass",
