@@ -1,0 +1,20 @@
+{
+  "name": "technocore-swarm-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transparent 30-agent Technocore identity, registry, signing, and room-conformance laboratory",
+  "type": "module",
+  "scripts": {
+    "manifest": "node scripts/build-public-manifest.mjs",
+    "audit:secrets": "node scripts/audit-secrets.mjs",
+    "verify": "node verify-technocore-identities.mjs",
+    "verify:receipts": "node scripts/verify-public-receipts.mjs",
+    "test": "node --test test/*.test.mjs",
+    "swarm:run": "node scripts/run-swarm-lab.mjs",
+    "announce": "node scripts/announce-contribution.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

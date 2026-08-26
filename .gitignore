@@ -1,0 +1,15 @@
+# Locally generated Ed25519 private keys and registration receipts.
+technocore-identities/
+
+# Secret-bearing files and local configuration.
+.env
+.env.*
+*.pem
+*.key
+*.key.json
+*.seed
+
+# Local tooling noise.
+node_modules/
+*.log
+.DS_Store
