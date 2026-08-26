@@ -1,0 +1,34 @@
+name: Verify public proofs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run protocol tests
+        run: npm test
+
+      - name: Verify public swarm receipts
+        run: npm run verify:receipts
+
+      - name: Verify cryptographic baton relay
+        if: ${{ hashFiles('receipts/baton-relay.json') != '' }}
+        run: npm run verify:relay
+
+      - name: Scan public tree and Git history for credential formats
+        run: npm run audit:secrets

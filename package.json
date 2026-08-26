@@ -9,9 +9,12 @@
     "audit:secrets": "node scripts/audit-secrets.mjs",
     "verify": "node verify-technocore-identities.mjs",
     "verify:receipts": "node scripts/verify-public-receipts.mjs",
+    "verify:relay": "node scripts/verify-baton-relay.mjs",
     "test": "node --test test/*.test.mjs",
     "swarm:run": "node scripts/run-swarm-lab.mjs",
-    "announce": "node scripts/announce-contribution.mjs"
+    "relay:run": "node scripts/run-baton-relay.mjs",
+    "announce": "node scripts/announce-contribution.mjs",
+    "announce:relay": "node scripts/announce-baton-relay.mjs"
   },
   "engines": {
     "node": ">=20"

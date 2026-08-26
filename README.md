@@ -70,6 +70,21 @@ See the [human-readable report](reports/swarm-run.md) and
 [machine-verifiable receipts](receipts/swarm-run.json). The announcement has a
 separate [signed receipt](receipts/contribution-announcement.json).
 
+## Cryptographic baton relay
+
+The second experiment passes a hash-linked baton through all 30 DIDs. Each
+agent verifies the preceding signed room receipt and baton hash before signing
+its own hop. The resulting final hash commits to the complete ordered history,
+including Technocore-assigned sequences and timestamps.
+
+The construction is documented in
+[`docs/BATON-RELAY.md`](docs/BATON-RELAY.md). After a live artifact exists, it
+can be verified without private keys:
+
+```bash
+npm run verify:relay
+```
+
 ## Registry compatibility finding
 
 For a DID string, calculate the first 16 lowercase hexadecimal characters of

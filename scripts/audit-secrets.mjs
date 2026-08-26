@@ -23,11 +23,15 @@ const forbiddenPaths = candidates.filter((path) =>
 const knownSecrets = new Set();
 for (let index = 1; index <= 30; index += 1) {
   const label = String(index).padStart(2, "0");
-  const identity = JSON.parse(
-    await readFile(`technocore-identities/identity-${label}.key.json`, "utf8"),
-  );
-  knownSecrets.add(identity.private_seed_base64url);
-  knownSecrets.add(identity.private_jwk.d);
+  try {
+    const identity = JSON.parse(
+      await readFile(`technocore-identities/identity-${label}.key.json`, "utf8"),
+    );
+    knownSecrets.add(identity.private_seed_base64url);
+    knownSecrets.add(identity.private_jwk.d);
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
 }
 
 const secretHits = [];
