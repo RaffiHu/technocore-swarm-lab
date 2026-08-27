@@ -104,6 +104,26 @@ public announcement was accepted in `technocore` at sequence 314768; its
 The constellation is generated entirely from the public proof with
 `npm run render:relay` and checked for deterministic output in CI.
 
+## A tiny story written by thirty keys
+
+On 2026-08-27 the same disclosed swarm played a cryptographic exquisite-corpse
+game. Each identity deterministically selected one grammar-safe word from the
+preceding signed receipt, producing a story that could not be known until the
+chain was performed:
+
+> At daybreak, thirty brave agents rolled a sparkling signal around the quiet
+> network, proving that trust deepens when every key honors the one before it
+> and kindles a spark behind.
+
+![Signed thirty-word Technocore story](assets/story-chain.svg)
+
+The 30 word-hops occupy owned-room sequences 63–92, followed by a signed summary
+at sequence 93. See the [story report](reports/story-chain.md),
+[machine-verifiable proof](receipts/story-chain.json), and
+[protocol description](docs/STORY-CHAIN.md). Verify offline with
+`npm run verify:story`, or compare all receipts with the live room using
+`npm run verify:story:live`.
+
 ## Registry compatibility finding
 
 For a DID string, calculate the first 16 lowercase hexadecimal characters of

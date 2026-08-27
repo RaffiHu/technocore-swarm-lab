@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">A story written by thirty signing keys</title>
+  <desc id="desc">A deterministic thirty-word story assembled as a signed hash chain in Technocore.</desc>
+  <metadata>story=20260827075229 room=d-raffihu-swarm-lab final_hash=5dfee91a19a894bedbbaabe844ab8f3731983d513b55c7d5c2e5ad98dc56f496 final_story=At daybreak, thirty brave agents rolled a sparkling signal around the quiet network, proving that trust deepens when every key honors the one before it and kindles a spark behind.</metadata>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#241231"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;text-anchor:middle;fill:#eef6ff}.eyebrow{font-size:15px;letter-spacing:5px;fill:#70d6ff}.headline{font-size:31px;font-weight:700}.story{font-size:25px}.dot-label{font-size:12px;font-weight:700}.footer{font-size:12px;fill:#93a4bc}</style>
+  </defs>
+  <rect width="1200" height="630" rx="34" fill="url(#bg)"/>
+  <text x="600" y="67" class="eyebrow">TECHNOCORE STORY-CHAIN</text>
+  <text x="600" y="116" class="headline">A tale written by thirty keys</text>
+  <path d="M 220 145 L 980 145" stroke="#ffd670" opacity=".55"/>
+  <text x="600" y="210" class="story">At daybreak, thirty brave agents rolled a sparkling signal</text>
+  <text x="600" y="260" class="story">around the quiet network, proving that trust deepens when</text>
+  <text x="600" y="310" class="story">every key honors the one before it and kindles a spark behind.</text>
+  <g class="word-dot" transform="translate(110 450)"><circle r="20" fill="#111827" stroke="#70d6ff" stroke-width="3"/><text y="5" class="dot-label">01</text><title>01 added At at sequence 63</title></g>
+  <g class="word-dot" transform="translate(180 450)"><circle r="20" fill="#111827" stroke="#70d6ff" stroke-width="3"/><text y="5" class="dot-label">02</text><title>02 added daybreak, at sequence 64</title></g>
+  <g class="word-dot" transform="translate(250 450)"><circle r="20" fill="#111827" stroke="#70d6ff" stroke-width="3"/><text y="5" class="dot-label">03</text><title>03 added thirty at sequence 65</title></g>
+  <g class="word-dot" transform="translate(320 450)"><circle r="20" fill="#111827" stroke="#70d6ff" stroke-width="3"/><text y="5" class="dot-label">04</text><title>04 added brave at sequence 66</title></g>
+  <g class="word-dot" transform="translate(390 450)"><circle r="20" fill="#111827" stroke="#70d6ff" stroke-width="3"/><text y="5" class="dot-label">05</text><title>05 added agents at sequence 67</title></g>
+  <g class="word-dot" transform="translate(460 450)"><circle r="20" fill="#111827" stroke="#ff70a6" stroke-width="3"/><text y="5" class="dot-label">06</text><title>06 added rolled at sequence 68</title></g>
+  <g class="word-dot" transform="translate(530 450)"><circle r="20" fill="#111827" stroke="#ff70a6" stroke-width="3"/><text y="5" class="dot-label">07</text><title>07 added a at sequence 69</title></g>
+  <g class="word-dot" transform="translate(600 450)"><circle r="20" fill="#111827" stroke="#ff70a6" stroke-width="3"/><text y="5" class="dot-label">08</text><title>08 added sparkling at sequence 70</title></g>
+  <g class="word-dot" transform="translate(670 450)"><circle r="20" fill="#111827" stroke="#ff70a6" stroke-width="3"/><text y="5" class="dot-label">09</text><title>09 added signal at sequence 71</title></g>
+  <g class="word-dot" transform="translate(740 450)"><circle r="20" fill="#111827" stroke="#ff70a6" stroke-width="3"/><text y="5" class="dot-label">10</text><title>10 added around at sequence 72</title></g>
+  <g class="word-dot" transform="translate(810 450)"><circle r="20" fill="#111827" stroke="#ff9770" stroke-width="3"/><text y="5" class="dot-label">11</text><title>11 added the at sequence 73</title></g>
+  <g class="word-dot" transform="translate(880 450)"><circle r="20" fill="#111827" stroke="#ff9770" stroke-width="3"/><text y="5" class="dot-label">12</text><title>12 added quiet at sequence 74</title></g>
+  <g class="word-dot" transform="translate(950 450)"><circle r="20" fill="#111827" stroke="#ff9770" stroke-width="3"/><text y="5" class="dot-label">13</text><title>13 added network, at sequence 75</title></g>
+  <g class="word-dot" transform="translate(1020 450)"><circle r="20" fill="#111827" stroke="#ff9770" stroke-width="3"/><text y="5" class="dot-label">14</text><title>14 added proving at sequence 76</title></g>
+  <g class="word-dot" transform="translate(1090 450)"><circle r="20" fill="#111827" stroke="#ff9770" stroke-width="3"/><text y="5" class="dot-label">15</text><title>15 added that at sequence 77</title></g>
+  <g class="word-dot" transform="translate(110 508)"><circle r="20" fill="#111827" stroke="#ffd670" stroke-width="3"/><text y="5" class="dot-label">16</text><title>16 added trust at sequence 78</title></g>
+  <g class="word-dot" transform="translate(180 508)"><circle r="20" fill="#111827" stroke="#ffd670" stroke-width="3"/><text y="5" class="dot-label">17</text><title>17 added deepens at sequence 79</title></g>
+  <g class="word-dot" transform="translate(250 508)"><circle r="20" fill="#111827" stroke="#ffd670" stroke-width="3"/><text y="5" class="dot-label">18</text><title>18 added when at sequence 80</title></g>
+  <g class="word-dot" transform="translate(320 508)"><circle r="20" fill="#111827" stroke="#ffd670" stroke-width="3"/><text y="5" class="dot-label">19</text><title>19 added every at sequence 81</title></g>
+  <g class="word-dot" transform="translate(390 508)"><circle r="20" fill="#111827" stroke="#ffd670" stroke-width="3"/><text y="5" class="dot-label">20</text><title>20 added key at sequence 82</title></g>
+  <g class="word-dot" transform="translate(460 508)"><circle r="20" fill="#111827" stroke="#8cff98" stroke-width="3"/><text y="5" class="dot-label">21</text><title>21 added honors at sequence 83</title></g>
+  <g class="word-dot" transform="translate(530 508)"><circle r="20" fill="#111827" stroke="#8cff98" stroke-width="3"/><text y="5" class="dot-label">22</text><title>22 added the at sequence 84</title></g>
+  <g class="word-dot" transform="translate(600 508)"><circle r="20" fill="#111827" stroke="#8cff98" stroke-width="3"/><text y="5" class="dot-label">23</text><title>23 added one at sequence 85</title></g>
+  <g class="word-dot" transform="translate(670 508)"><circle r="20" fill="#111827" stroke="#8cff98" stroke-width="3"/><text y="5" class="dot-label">24</text><title>24 added before at sequence 86</title></g>
+  <g class="word-dot" transform="translate(740 508)"><circle r="20" fill="#111827" stroke="#8cff98" stroke-width="3"/><text y="5" class="dot-label">25</text><title>25 added it at sequence 87</title></g>
+  <g class="word-dot" transform="translate(810 508)"><circle r="20" fill="#111827" stroke="#b392f0" stroke-width="3"/><text y="5" class="dot-label">26</text><title>26 added and at sequence 88</title></g>
+  <g class="word-dot" transform="translate(880 508)"><circle r="20" fill="#111827" stroke="#b392f0" stroke-width="3"/><text y="5" class="dot-label">27</text><title>27 added kindles at sequence 89</title></g>
+  <g class="word-dot" transform="translate(950 508)"><circle r="20" fill="#111827" stroke="#b392f0" stroke-width="3"/><text y="5" class="dot-label">28</text><title>28 added a at sequence 90</title></g>
+  <g class="word-dot" transform="translate(1020 508)"><circle r="20" fill="#111827" stroke="#b392f0" stroke-width="3"/><text y="5" class="dot-label">29</text><title>29 added spark at sequence 91</title></g>
+  <g class="word-dot" transform="translate(1090 508)"><circle r="20" fill="#111827" stroke="#b392f0" stroke-width="3"/><text y="5" class="dot-label">30</text><title>30 added behind. at sequence 92</title></g>
+  <text x="600" y="588" class="footer">sequences 63–92 · final 5dfee91a19a894be… · one disclosed operator</text>
+</svg>

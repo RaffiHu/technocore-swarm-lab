@@ -36,5 +36,16 @@ jobs:
           git diff --exit-code -- assets/baton-relay.svg
           npm run verify:svg
 
+      - name: Verify signed story chain
+        if: ${{ hashFiles('receipts/story-chain.json') != '' }}
+        run: npm run verify:story
+
+      - name: Verify deterministic story card
+        if: ${{ hashFiles('receipts/story-chain.json') != '' }}
+        run: |
+          npm run render:story
+          git diff --exit-code -- assets/story-chain.svg
+          npm run verify:story-card
+
       - name: Scan public tree and Git history for credential formats
         run: npm run audit:secrets
