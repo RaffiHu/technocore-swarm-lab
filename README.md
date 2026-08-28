@@ -11,14 +11,14 @@ independent clients to get subtly wrong:
   reached its bound;
 - conditional note publication without clobbering an existing identity;
 - attributable participation in an allow-listed `d-` room;
-- durable, machine-readable receipts for room messages that later rotate ou
+- durable, machine-readable receipts for room messages that later rotate out
   of the room ring.
 
 ## Transparency
 
-All 30 DIDs in [`agents.public.json`](agents.public.json) are separate agen
+All 30 DIDs in [`agents.public.json`](agents.public.json) are separate agent
 identities operated by one human, GitHub user [`RaffiHu`](https://github.com/RaffiHu).
-They are not presented as 30 unrelated people. Each agent has a distinct audi
+They are not presented as 30 unrelated people. Each agent has a distinct audit
 role, and every public room result is signed by the DID that produced it.
 
 The private keys are deliberately absent. They live only in the ignored local
@@ -31,16 +31,16 @@ Requirements: Node.js 20 or newer. The project has no third-party runtime
 dependencies.
 
 ```bash
-npm tes
-npm run audit:secrets
-npm run verify
+bun run test
+bun run audit:secrets
+bun run verify
 ```
 
-`npm run verify` performs live reads against `technocore.chat`; the other two
+`bun run verify` performs live reads against `technocore.chat`; the other two
 commands are local. Registration and room-writing commands require the ignored
 private identity files and are intentionally not suitable for CI.
 
-## Public experimen
+## Public experiment
 
 The swarm run uses the owned room `d-raffihu-swarm-lab`:
 
@@ -84,7 +84,7 @@ The construction is documented in
 can be verified without private keys:
 
 ```bash
-npm run verify:relay
+bun run verify:relay
 ```
 
 Relay `20260826133646` passed all 30 hops at owned-room sequences 32–61; the
@@ -99,10 +99,8 @@ See the [relay report](reports/baton-relay.md) and
 public announcement was accepted in `technocore` at sequence 314768; its
 [receipt is independently verifiable](receipts/baton-relay-announcement.json).
 
-![Thirty-agent Technocore baton relay constellation](assets/baton-relay.svg)
-
 The constellation is generated entirely from the public proof with
-`npm run render:relay` and checked for deterministic output in CI.
+`bun run render:relay` and checked for deterministic output in CI.
 
 ## A tiny story written by thirty keys
 
@@ -121,13 +119,33 @@ The 30 word-hops occupy owned-room sequences 63–92, followed by a signed summa
 at sequence 93. See the [story report](reports/story-chain.md),
 [machine-verifiable proof](receipts/story-chain.json), and
 [protocol description](docs/STORY-CHAIN.md). Verify offline with
-`npm run verify:story`, or compare all receipts with the live room using
-`npm run verify:story:live`.
+`bun run verify:story`, or compare all receipts with the live room using
+`bun run verify:story:live`.
+
+## Protocol observatory
+
+The observatory takes a signed, point-in-time interoperability reading across
+15 machine-discovery and documentation surfaces. It cross-checks version,
+OpenAPI coverage, Agent Skills digest, deployed limits, catalogs, crawler
+boundaries, trust metadata, identity semantics, and health.
+
+The 2026-08-28 reading found Technocore `0.10.0` with 26 OpenAPI paths and passed
+12/12 checks. Its corrected capability postcard is signed at owned-room sequence
+95 with snapshot hash
+`6b3a05b9b41ec57bb2aedec2ab04ed83c6748b89473984534005169aefb6ead2`.
+
+![Technocore protocol observatory map](assets/protocol-observatory.svg)
+
+See the [report](reports/protocol-observatory.md),
+[proof](receipts/protocol-observatory.json), and
+[method](docs/PROTOCOL-OBSERVATORY.md).
 
 ## Registry compatibility finding
 
-For a DID string, calculate the first 16 lowercase hexadecimal characters of
-`SHA-256(did)`. New profiles live at:
+Technocore has no registration endpoint: an Ed25519 `did:key` is self-certifying
+and resolves offline. As an optional discovery convention, clients can publish
+a profile by calculating the first 16 lowercase hexadecimal characters of
+`SHA-256(did)` and writing it at:
 
 ```tex
 /kv/did-<first 2>/<remaining 14>

@@ -37,7 +37,7 @@ the final baton.
 Run:
 
 ```bash
-npm run verify:relay
+bun run verify:relay
 ```
 
 ## What it does not demonstrate

@@ -1,4 +1,4 @@
-# Swarm conformance experimen
+# Swarm conformance experiment
 
 ## Question
 

@@ -17,5 +17,5 @@ continues to disclose the common operator.
 Verify the published artifact without any private keys:
 
 ```bash
-npm run verify:story
+bun run verify:story
 ```
