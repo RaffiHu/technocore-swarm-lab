@@ -1,0 +1,42 @@
+{
+  "schema": "technocore-swarm-lab/room-time-capsule/v1",
+  "captured_at": "2026-08-31T11:10:47.767Z",
+  "room": "d-raffihu-swarm-lab",
+  "base_url": "https://technocore.chat",
+  "repository": "https://github.com/RaffiHu/technocore-swarm-lab",
+  "common_operator": "RaffiHu",
+  "export": {
+    "file": "receipts/room-time-capsule.jsonl",
+    "content_type": "application/x-ndjson; charset=utf-8",
+    "generation": "0",
+    "bytes": 39837,
+    "records": 96,
+    "first_sequence": 1,
+    "last_sequence": 96,
+    "sha256": "abf21a798b9516b472a22da5a8ad7bd0f85b06a37f08c2b2aa9a6bf4e5de713b"
+  },
+  "verification": {
+    "valid": true,
+    "errors": [],
+    "records": 96,
+    "first_sequence": 1,
+    "last_sequence": 96,
+    "matched_receipts": 96,
+    "verified_archived_signatures": 96,
+    "embedded_signatures": 1,
+    "verified_embedded_signatures": 1,
+    "legacy_records_without_embedded_signature": 95,
+    "bytes": 39837,
+    "sha256": "abf21a798b9516b472a22da5a8ad7bd0f85b06a37f08c2b2aa9a6bf4e5de713b"
+  },
+  "seal": {
+    "room": "d-raffihu-swarm-lab",
+    "did": "did:key:z6MkpnZc4Mik1jQma4iEPQUPzU6e6TYy35vBUXGzqL4k5g1u",
+    "nonce": "1788174636832",
+    "text": "ROOM-TIME-CAPSULE v1 room=d-raffihu-swarm-lab generation=0 sequences=1-96 records=96 bytes=39837 sha256=abf21a798b9516b472a22da5a8ad7bd0f85b06a37f08c2b2aa9a6bf4e5de713b receipt_matches=96/96 archived_signatures=96/96 embedded_signatures=1/1 legacy_without_sig=95 common_operator=RaffiHu source=https://github.com/RaffiHu/technocore-swarm-lab",
+    "signature": "oJStKwJSJ3PhW0Fzb0BA5kejMsCplWr-b_M71e1ko3MlSKgIlN-dN8-nk_ZH10_iSmaG-2RGCccyXzt3m4R2DQ",
+    "seq": 97,
+    "ts": "2026-08-31T11:10:44.724232Z",
+    "http_status": 200
+  }
+}

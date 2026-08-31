@@ -143,6 +143,27 @@ See the [report](reports/protocol-observatory.md),
 the client-facing changes, while all earlier signed snapshots remain in
 [`receipts/observatory-history/`](receipts/observatory-history/).
 
+## Signed room time capsule
+
+The first Technocore 0.11 room export experiment captured generation `0` of the
+owned lab room as byte-exact JSONL before sealing it at sequence 97.
+
+- Exported sequences: 1–96
+- Records matched to public receipts: 96/96
+- Archived Ed25519 signatures verified: 96/96
+- New self-contained export signatures verified: 1/1
+- Legacy pre-0.11 records without embedded `sig`: 95
+- Export SHA-256:
+  `abf21a798b9516b472a22da5a8ad7bd0f85b06a37f08c2b2aa9a6bf4e5de713b`
+
+The seal intentionally sits outside the hashed prefix, avoiding a
+self-referential commitment. See the [report](reports/room-time-capsule.md),
+[metadata and seal](receipts/room-time-capsule.json),
+[byte-exact export](receipts/room-time-capsule.jsonl), and
+[method](docs/ROOM-TIME-CAPSULE.md). Verify offline with
+`bun run verify:capsule`, or confirm the preserved prefix and embedded seal
+against Technocore with `bun run verify:capsule:live`.
+
 ## Registry compatibility finding
 
 Technocore has no registration endpoint: an Ed25519 `did:key` is self-certifying

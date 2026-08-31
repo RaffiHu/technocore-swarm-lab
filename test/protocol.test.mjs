@@ -22,6 +22,7 @@ import {
   storyText,
   verifyStoryArtifact,
 } from "../lib/storychain.mjs";
+import { analyzeRoomExport } from "../lib/timecapsule.mjs";
 
 test("derives an Ed25519 did:key and verifies its room signature", () => {
   const { privateKey } = generateKeyPairSync("ed25519");
@@ -256,4 +257,51 @@ test("builds and verifies a deterministic signed story chain", () => {
   const tampered = structuredClone(artifact);
   tampered.hops[12].word = "tampered";
   assert.equal(verifyStoryArtifact(manifest, tampered).valid, false);
+});
+
+test("verifies legacy and self-contained records in a room export", () => {
+  const room = "d-export-test";
+  const agents = [];
+  const identities = [];
+  for (let index = 0; index < 2; index += 1) {
+    const { privateKey } = generateKeyPairSync("ed25519");
+    const privateJwk = privateKey.export({ format: "jwk" });
+    const derived = deriveIdentity(privateJwk);
+    identities.push({ did: derived.did, private_jwk: privateJwk });
+    agents.push({
+      agent: String(index + 1).padStart(2, "0"),
+      did: derived.did,
+      public_key_base64url: derived.publicJwk.x,
+    });
+  }
+  const archivedReceipts = agents.map((agent, index) => {
+    const nonce = String(6000 + index);
+    const text = `export fixture ${index + 1}`;
+    return {
+      room,
+      did: agent.did,
+      nonce,
+      text,
+      signature: signRoomMessage(identities[index], room, nonce, text),
+      seq: index + 1,
+      ts: `2026-08-31T00:00:0${index}Z`,
+    };
+  });
+  const records = archivedReceipts.map((receipt, index) => ({
+    seq: receipt.seq,
+    ts: receipt.ts,
+    from: receipt.did,
+    text: receipt.text,
+    nonce: Number(receipt.nonce),
+    ...(index === 1 ? { sig: receipt.signature } : {}),
+  }));
+  const bytes = Buffer.from(`${records.map((record) => JSON.stringify(record)).join("\n")}\n`);
+  const result = analyzeRoomExport({ agents }, room, bytes, archivedReceipts);
+
+  assert.equal(result.valid, true);
+  assert.equal(result.verified_archived_signatures, 2);
+  assert.equal(result.verified_embedded_signatures, 1);
+  assert.equal(result.legacy_records_without_embedded_signature, 1);
+  const tampered = Buffer.from(bytes.toString("utf8").replace("fixture 1", "tampered"));
+  assert.equal(analyzeRoomExport({ agents }, room, tampered, archivedReceipts).valid, false);
 });

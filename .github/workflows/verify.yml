@@ -56,5 +56,9 @@ jobs:
           git diff --exit-code -- assets/protocol-observatory.svg
           bun run verify:observatory-map
 
+      - name: Verify signed room time capsule
+        if: ${{ hashFiles('receipts/room-time-capsule.json') != '' }}
+        run: bun run verify:capsule
+
       - name: Scan public tree and Git history for credential formats
         run: bun run audit:secrets

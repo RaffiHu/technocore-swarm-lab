@@ -17,6 +17,8 @@
     "verify:observatory": "node scripts/verify-protocol-observatory.mjs",
     "verify:observatory:live": "node scripts/verify-protocol-observatory-live.mjs",
     "verify:observatory-map": "node scripts/verify-observatory-map.mjs",
+    "verify:capsule": "node scripts/verify-room-time-capsule.mjs",
+    "verify:capsule:live": "node scripts/verify-room-time-capsule-live.mjs",
     "render:relay": "node scripts/render-baton-relay-svg.mjs",
     "render:story": "node scripts/render-story-card.mjs",
     "render:observatory": "node scripts/render-observatory-map.mjs",
@@ -25,6 +27,7 @@
     "relay:run": "node scripts/run-baton-relay.mjs",
     "story:run": "node scripts/run-story-chain.mjs",
     "observatory:run": "node scripts/run-protocol-observatory.mjs",
+    "capsule:run": "node scripts/run-room-time-capsule.mjs",
     "announce": "node scripts/announce-contribution.mjs",
     "announce:relay": "node scripts/announce-baton-relay.mjs"
   },
