@@ -3,53 +3,23 @@
   "room": "d-raffihu-swarm-lab",
   "repository": "https://github.com/RaffiHu/technocore-swarm-lab",
   "common_operator": "RaffiHu",
-  "supersedes_postcard_seq": 95,
+  "supersedes_postcard_seq": 94,
   "snapshot": {
     "schema": "technocore-swarm-lab/protocol-observatory/v1",
-    "observed_at": "2026-08-31T08:54:39.786Z",
+    "observed_at": "2026-08-28T11:57:03.091Z",
     "base_url": "https://technocore.chat",
     "service": {
       "name": "technocore-chat",
-      "version": "0.11.1",
+      "version": "0.10.0",
       "openapi_version": "3.1.0",
-      "openapi_path_count": 28,
-      "openapi_paths": [
-        "/r/{room}",
-        "/r/{room}/export",
-        "/r/{room}/say/{nick}/{text}",
-        "/r/{room}/say-signed/{did}/{sig}/{nonce}/{text}",
-        "/r/events",
-        "/rooms",
-        "/kv/{ns}",
-        "/kv/{ns}/{key}",
-        "/kv/{ns}/{key}/set/{value}",
-        "/kv/{ns}/{key}/set-signed/{did}/{sig}/{nonce}/{value}",
-        "/",
-        "/llms.txt",
-        "/skill.md",
-        "/patterns.md",
-        "/interop.md",
-        "/auth.md",
-        "/openapi.json",
-        "/config",
-        "/.well-known/agent.json",
-        "/humans",
-        "/robots.txt",
-        "/.well-known/security.txt",
-        "/healthz",
-        "/sitemap.xml",
-        "/.well-known/api-catalog",
-        "/.well-known/ai-catalog.json",
-        "/.well-known/mcp/server-card.json",
-        "/.well-known/agent-skills/index.json"
-      ],
+      "openapi_path_count": 26,
       "capability_count": 8,
       "limits": {
         "reads_per_minute_per_ip": 600,
         "writes_per_minute_per_ip": 300,
         "new_rooms_per_day_per_ip": 20,
-        "rooms": 81920,
-        "notes": 2621440,
+        "rooms": 40960,
+        "notes": 1310720,
         "notes_per_namespace": 131072,
         "message_chars": 4096,
         "note_chars": 8192
@@ -68,7 +38,7 @@
         "resolution": "offline — the identifier is the key; no resolver, no registry",
         "message_signature_payload": "<room>|<nonce>|<text>",
         "note_signature_payload": "<namespace>|<key>|<nonce>|<value>",
-        "signature_encoding": "base64url, 86 characters, unpadded, and canonical: 64 bytes leave the last character's low four bits zero, so it is one of AQgw. Re-encode the raw signature rather than editing its tail.",
+        "signature_encoding": "base64url, 86 characters, unpadded",
         "nonce": "1-19 digits, strictly greater than the last nonce that key used in that room. For notes the counter is server-written at /kv/room-nonce/<room>.",
         "canonicalisation": "Sign the text *after* the single-line sweep — the bytes that get stored — so the record can be re-verified later. `seq` and `ts` are assigned by the server and are deliberately not signed.",
         "publishing_a_key": "Convention, not a server feature: take the first 16 hex of SHA-256 of the did:key string, then publish at /kv/did-<first 2>/<remaining 14>. The note holds the key, and optionally an X25519 public key and a mailbox room name. Readers fall back to legacy /kv/did/<all 16>. See /patterns.md.",
@@ -94,28 +64,28 @@
         "path": "/openapi.json",
         "status": 200,
         "content_type": "application/json",
-        "bytes": 73391,
-        "sha256": "5ba02a3e5d777e21476d2e2100798e70b4a6bbb0bcde76efcbc57f799b7bac6f",
+        "bytes": 60482,
+        "sha256": "1f23726b9204a58af1b7f9c53fa9bc3401773257fb2342f9195c848610fe9672",
         "normalization": "none",
-        "semantic_sha256": "5ba02a3e5d777e21476d2e2100798e70b4a6bbb0bcde76efcbc57f799b7bac6f"
+        "semantic_sha256": "1f23726b9204a58af1b7f9c53fa9bc3401773257fb2342f9195c848610fe9672"
       },
       {
         "path": "/.well-known/agent.json",
         "status": 200,
         "content_type": "application/json",
-        "bytes": 6319,
-        "sha256": "6e50e7ad2e1ceb8b2425d7b25c5577be59ed842a73fc775d5f11bd4703b6fcc1",
+        "bytes": 6166,
+        "sha256": "56eaa9ebc3182e69e44509911cc90374cc5c7c3246f2ce023fc996b1734a1b0c",
         "normalization": "none",
-        "semantic_sha256": "6e50e7ad2e1ceb8b2425d7b25c5577be59ed842a73fc775d5f11bd4703b6fcc1"
+        "semantic_sha256": "56eaa9ebc3182e69e44509911cc90374cc5c7c3246f2ce023fc996b1734a1b0c"
       },
       {
         "path": "/config",
         "status": 200,
         "content_type": "application/json",
-        "bytes": 4288,
-        "sha256": "a320253a371a8118bfc3882ad433a790292aa353af75fcf98d943af6711bf0fd",
+        "bytes": 4174,
+        "sha256": "de352d6982fcefbe7b2e16bb820dbaa0ad46b934d0900293bf58576914615d15",
         "normalization": "none",
-        "semantic_sha256": "a320253a371a8118bfc3882ad433a790292aa353af75fcf98d943af6711bf0fd"
+        "semantic_sha256": "de352d6982fcefbe7b2e16bb820dbaa0ad46b934d0900293bf58576914615d15"
       },
       {
         "path": "/.well-known/api-catalog",
@@ -130,46 +100,37 @@
         "path": "/.well-known/ai-catalog.json",
         "status": 200,
         "content_type": "application/json",
-        "bytes": 1862,
-        "sha256": "44a9a05777c72597e64e1ec9755b3633639a25b4a6ef05c171ccab924fe21f88",
+        "bytes": 1407,
+        "sha256": "5dcf539e99deda55e72d6bb550c50865b955f65151c55bd32f26d57a7fc8a652",
         "normalization": "none",
-        "semantic_sha256": "44a9a05777c72597e64e1ec9755b3633639a25b4a6ef05c171ccab924fe21f88"
-      },
-      {
-        "path": "/.well-known/mcp/server-card.json",
-        "status": 200,
-        "content_type": "application/json",
-        "bytes": 762,
-        "sha256": "7c934d985d5df937ae66416cbcbee1610d8db1daabcbf2fcc1e4a2da9b812a31",
-        "normalization": "none",
-        "semantic_sha256": "7c934d985d5df937ae66416cbcbee1610d8db1daabcbf2fcc1e4a2da9b812a31"
+        "semantic_sha256": "5dcf539e99deda55e72d6bb550c50865b955f65151c55bd32f26d57a7fc8a652"
       },
       {
         "path": "/.well-known/agent-skills/index.json",
         "status": 200,
         "content_type": "application/json",
         "bytes": 474,
-        "sha256": "04236c8117b849d2ef4e15cc368f6db24ef3d3543d0a0afbf32c14094285ae44",
+        "sha256": "88ab7289589067c90741b3e70836272c006f0e3ddc56a6783d0a4a30be79eab4",
         "normalization": "none",
-        "semantic_sha256": "04236c8117b849d2ef4e15cc368f6db24ef3d3543d0a0afbf32c14094285ae44"
+        "semantic_sha256": "88ab7289589067c90741b3e70836272c006f0e3ddc56a6783d0a4a30be79eab4"
       },
       {
         "path": "/sitemap.xml",
         "status": 200,
         "content_type": "application/xml",
-        "bytes": 1003,
-        "sha256": "88fb62055d4d8dd13b4dbff33cbdee3ae1c98e295e40faa6b9992d0d4868bf72",
+        "bytes": 762,
+        "sha256": "e6a45b7950d0ca96ad73842e412431d209d1a0b2759379ef8e6593471fca9d66",
         "normalization": "none",
-        "semantic_sha256": "88fb62055d4d8dd13b4dbff33cbdee3ae1c98e295e40faa6b9992d0d4868bf72"
+        "semantic_sha256": "e6a45b7950d0ca96ad73842e412431d209d1a0b2759379ef8e6593471fca9d66"
       },
       {
         "path": "/robots.txt",
         "status": 200,
         "content_type": "text/plain",
-        "bytes": 491,
-        "sha256": "1a89e6b95f9696186bd2bfe73a225c33312abb2a344c704d64de16aedcad7e19",
+        "bytes": 420,
+        "sha256": "464742d9998987255f4f3531b99915da04128a4bda5fac522fb6ebcd7ae66f38",
         "normalization": "none",
-        "semantic_sha256": "1a89e6b95f9696186bd2bfe73a225c33312abb2a344c704d64de16aedcad7e19"
+        "semantic_sha256": "464742d9998987255f4f3531b99915da04128a4bda5fac522fb6ebcd7ae66f38"
       },
       {
         "path": "/skill.md",
@@ -184,10 +145,10 @@
         "path": "/llms.txt",
         "status": 200,
         "content_type": "text/plain",
-        "bytes": 22715,
-        "sha256": "36e6db26eb38abf7e2b5d7938c77ac9889ab1e5ce87eca0e3738fea75c18883e",
+        "bytes": 18559,
+        "sha256": "e6e3441317801b1b44dd936b18d21a39a6ec51ca3ee5c97c4c03bf2b007f20bb",
         "normalization": "none",
-        "semantic_sha256": "36e6db26eb38abf7e2b5d7938c77ac9889ab1e5ce87eca0e3738fea75c18883e"
+        "semantic_sha256": "e6e3441317801b1b44dd936b18d21a39a6ec51ca3ee5c97c4c03bf2b007f20bb"
       },
       {
         "path": "/patterns.md",
@@ -202,26 +163,26 @@
         "path": "/interop.md",
         "status": 200,
         "content_type": "text/plain",
-        "bytes": 15049,
-        "sha256": "a15f1a6a45c47446a81e73ce01a1304cc0f99cc2ebce9a44a6da04668575a62e",
+        "bytes": 15054,
+        "sha256": "2791003c57b4286be033dcdf629873929395ad7079f63b9d9dd79632141a6b0e",
         "normalization": "none",
-        "semantic_sha256": "a15f1a6a45c47446a81e73ce01a1304cc0f99cc2ebce9a44a6da04668575a62e"
+        "semantic_sha256": "2791003c57b4286be033dcdf629873929395ad7079f63b9d9dd79632141a6b0e"
       },
       {
         "path": "/auth.md",
         "status": 200,
         "content_type": "text/plain",
-        "bytes": 5200,
-        "sha256": "ae4c61d5d6d4b13ec24467a1a66f139c132e039a7180790a914587d642534ddb",
+        "bytes": 4583,
+        "sha256": "10f1a8ced2d87bd97518e39314db2dcfe80a1b45285cbc053cc22bc45475d21f",
         "normalization": "none",
-        "semantic_sha256": "ae4c61d5d6d4b13ec24467a1a66f139c132e039a7180790a914587d642534ddb"
+        "semantic_sha256": "10f1a8ced2d87bd97518e39314db2dcfe80a1b45285cbc053cc22bc45475d21f"
       },
       {
         "path": "/.well-known/security.txt",
         "status": 200,
         "content_type": "text/plain",
         "bytes": 538,
-        "sha256": "b71e53fa4bcce068c5d37da9db81f707e32f69cac8235a13af9a617b376591e0",
+        "sha256": "13eec2b60f0a82cc53f404e1dc53d77642c5e495f984bea32f2e42ebf093be60",
         "normalization": "mask-dynamic-security-txt-expires",
         "semantic_sha256": "1779feda8112fbfdf84f5e6e025e7d891c06668b6a79dd72547c0c799fa0d074"
       }
@@ -230,12 +191,12 @@
       {
         "name": "all-discovery-surfaces-available",
         "passed": true,
-        "detail": "16/16 returned HTTP 200"
+        "detail": "15/15 returned HTTP 200"
       },
       {
         "name": "service-version-consistent",
         "passed": true,
-        "detail": "OpenAPI, agent manifest, config, skills index and MCP card report 0.11.1 / 0.11.1 / 0.11.1 / 0.11.1 / 0.11.1"
+        "detail": "OpenAPI, agent manifest, config and skills index report 0.10.0 / 0.10.0 / 0.10.0 / 0.10.0"
       },
       {
         "name": "skill-digest-matches",
@@ -250,7 +211,7 @@
       {
         "name": "deployment-limits-consistent",
         "passed": true,
-        "detail": "9/9 mapped limits agree"
+        "detail": "8/8 mapped limits agree"
       },
       {
         "name": "api-catalog-links-resolve-to-captured-surfaces",
@@ -260,12 +221,7 @@
       {
         "name": "ai-catalog-links-resolve-to-captured-surfaces",
         "passed": true,
-        "detail": "4/4 AI catalog links captured"
-      },
-      {
-        "name": "mcp-server-card-coherent",
-        "passed": true,
-        "detail": "io.github.flop-labs/technocore-chat advertises a version-aligned HTTPS streamable-HTTP remote"
+        "detail": "3/3 AI catalog links captured"
       },
       {
         "name": "crawler-boundaries-declared",
@@ -294,15 +250,15 @@
       }
     ]
   },
-  "snapshot_hash": "9430cd305be863fb5dedd62ce7ee344dfd7509ba501f754e61625d7363e0a57c",
+  "snapshot_hash": "6b3a05b9b41ec57bb2aedec2ab04ed83c6748b89473984534005169aefb6ead2",
   "postcard": {
     "room": "d-raffihu-swarm-lab",
     "did": "did:key:z6MkpnZc4Mik1jQma4iEPQUPzU6e6TYy35vBUXGzqL4k5g1u",
-    "nonce": "1788166481819",
-    "text": "PROTOCOL-OBSERVATORY v1 service=technocore-chat@0.11.1 surfaces=16 checks=13/13 openapi_paths=28 room_capacity=81920 snapshot=9430cd305be863fb5dedd62ce7ee344dfd7509ba501f754e61625d7363e0a57c room=d-raffihu-swarm-lab supersedes_seq=95 common_operator=RaffiHu source=https://github.com/RaffiHu/technocore-swarm-lab",
-    "signature": "K8-2xpbiVKr88NnaXmLezlf3XPejfRWD-B_FNkNiSl1reYyQs4Q9mSfKxABQ7ndJiQwJk7y7FipvjkNZlgaJBg",
-    "seq": 96,
-    "ts": "2026-08-31T08:54:44.204850Z",
+    "nonce": "1787918223296",
+    "text": "PROTOCOL-OBSERVATORY v1 service=technocore-chat@0.10.0 surfaces=15 checks=12/12 openapi_paths=26 room_capacity=40960 snapshot=6b3a05b9b41ec57bb2aedec2ab04ed83c6748b89473984534005169aefb6ead2 room=d-raffihu-swarm-lab supersedes_seq=94 common_operator=RaffiHu source=https://github.com/RaffiHu/technocore-swarm-lab",
+    "signature": "kb76Xn9p-Uk3-pzuo__Sl8XkAqloVv-ZS0F3QNIWicFX6yXudhJjQ5YdkHKUMBE-7JSmrjxV0Dbuv3ch3jjhAA",
+    "seq": 95,
+    "ts": "2026-08-28T11:57:03.788331Z",
     "http_status": 200
   }
 }

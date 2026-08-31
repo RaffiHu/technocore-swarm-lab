@@ -67,8 +67,11 @@ const artifact = {
 await mkdir("receipts", { recursive: true });
 await mkdir("reports", { recursive: true });
 if (previousArtifact) {
+  await mkdir("receipts/observatory-history", { recursive: true });
+  const previousVersion = previousArtifact.snapshot.service.version.replaceAll(/[^0-9A-Za-z.-]/g, "-");
+  const previousSequence = previousArtifact.postcard.seq;
   await writeFile(
-    "receipts/protocol-observatory-previous.json",
+    `receipts/observatory-history/${previousVersion}-seq${previousSequence}.json`,
     `${JSON.stringify(previousArtifact, null, 2)}\n`,
     "utf8",
   );
@@ -88,8 +91,9 @@ await writeFile(
     `- Signed postcard: owned-room sequence ${postcard.seq}\n\n` +
     (supersedesSeq === null
       ? ""
-      : `This snapshot supersedes sequence ${supersedesSeq}; that first reading revealed the intentionally rolling ` +
-        "`Expires:` field in `security.txt`, which is now semantically normalized while its raw hash remains preserved.\n\n") +
+      : `This snapshot supersedes sequence ${supersedesSeq}. Earlier signed snapshots remain in ` +
+        "`receipts/observatory-history/`. The rolling `Expires:` field in `security.txt` is semantically " +
+        "normalized while its raw hash remains preserved.\n\n") +
     `This is a point-in-time interoperability snapshot, not an availability SLA. ` +
     `Verify it offline with \`bun run verify:observatory\` or detect live drift with \`bun run verify:observatory:live\`.\n`,
   "utf8",

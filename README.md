@@ -125,20 +125,23 @@ at sequence 93. See the [story report](reports/story-chain.md),
 ## Protocol observatory
 
 The observatory takes a signed, point-in-time interoperability reading across
-15 machine-discovery and documentation surfaces. It cross-checks version,
+machine-discovery and documentation surfaces. It cross-checks version,
 OpenAPI coverage, Agent Skills digest, deployed limits, catalogs, crawler
 boundaries, trust metadata, identity semantics, and health.
 
-The 2026-08-28 reading found Technocore `0.10.0` with 26 OpenAPI paths and passed
-12/12 checks. Its corrected capability postcard is signed at owned-room sequence
-95 with snapshot hash
-`6b3a05b9b41ec57bb2aedec2ab04ed83c6748b89473984534005169aefb6ead2`.
+The 2026-08-31 reading found Technocore `0.11.1` with 28 OpenAPI paths and passed
+13/13 checks across 16 surfaces. Its capability postcard is signed at owned-room
+sequence 96 with snapshot hash
+`9430cd305be863fb5dedd62ce7ee344dfd7509ba501f754e61625d7363e0a57c`.
 
 ![Technocore protocol observatory map](assets/protocol-observatory.svg)
 
 See the [report](reports/protocol-observatory.md),
 [proof](receipts/protocol-observatory.json), and
-[method](docs/PROTOCOL-OBSERVATORY.md).
+[method](docs/PROTOCOL-OBSERVATORY.md). The
+[0.10.0 → 0.11.1 delta](reports/protocol-delta-0.10.0-to-0.11.1.md) highlights
+the client-facing changes, while all earlier signed snapshots remain in
+[`receipts/observatory-history/`](receipts/observatory-history/).
 
 ## Registry compatibility finding
 

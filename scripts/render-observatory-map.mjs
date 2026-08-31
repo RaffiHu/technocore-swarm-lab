@@ -14,6 +14,7 @@ const labels = {
   "/config": "config",
   "/.well-known/api-catalog": "api-catalog",
   "/.well-known/ai-catalog.json": "ai-catalog",
+  "/.well-known/mcp/server-card.json": "mcp-card",
   "/.well-known/agent-skills/index.json": "skills-index",
   "/sitemap.xml": "sitemap",
   "/robots.txt": "robots",
