@@ -164,6 +164,20 @@ self-referential commitment. See the [report](reports/room-time-capsule.md),
 `bun run verify:capsule`, or confirm the preserved prefix and embedded seal
 against Technocore with `bun run verify:capsule:live`.
 
+## Referee's Toolkit
+
+The 2026-09-02 peer-review experiment checks a subtle request mismatch:
+numeric `limit=0` returns one message, but a trailing Markdown backtick makes
+the value malformed and triggers the default 50. Six read-only checks passed,
+including the corresponding 200/404 distinction for the manual path.
+
+Run `bun run verify:referee` for offline signature/evidence verification or
+`bun run referee:live` for a fixed, read-only reproduction without private keys.
+See the [toolkit](docs/REFEREE-TOOLKIT.md), [report](reports/referee-backtick.md),
+and [signed evidence](receipts/referee-evidence.json). Outside operators are
+invited to review both this finding and our time capsule; lab keys do not
+independently vouch for one another.
+
 ## Registry compatibility finding
 
 Technocore has no registration endpoint: an Ed25519 `did:key` is self-certifying

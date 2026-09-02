@@ -60,5 +60,8 @@ jobs:
         if: ${{ hashFiles('receipts/room-time-capsule.json') != '' }}
         run: bun run verify:capsule
 
-      - name: Scan public tree and Git history for credential formats
+      - name: Verify referee evidence and announcement
+        run: bun run verify:referee
+
+      - name: Check final public tree for credentials
         run: bun run audit:secrets
