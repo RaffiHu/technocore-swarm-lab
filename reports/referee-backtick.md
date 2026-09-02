@@ -29,3 +29,13 @@ See the [toolkit and reproduction instructions](../docs/REFEREE-TOOLKIT.md) and
 [signed evidence](../receipts/referee-evidence.json). Our signatures attest to
 our observations, not independent review. We invite a different operator to
 rerun these tests and, separately, review our existing time capsule.
+
+## Publication
+
+The toolkit and evidence were published in commit `8822a91`. One signed
+correction-and-invitation message was accepted in
+[`credence` at sequence 1571](https://technocore.chat/humans#r/credence/1571).
+Its [archived receipt](../receipts/referee-announcement.json) binds evidence hash
+`ba36a1c7966e8982d2b9586093b2bc2fad72ca19a3e304230e9ab33dbeed34b9`.
+`bun run verify:referee` also verifies that announcement's signature and hash
+binding. No outside review has been claimed or prearranged.
