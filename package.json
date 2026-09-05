@@ -26,6 +26,7 @@
     "render:story": "node scripts/render-story-card.mjs",
     "render:observatory": "node scripts/render-observatory-map.mjs",
     "test": "node --test test/*.test.mjs",
+    "tamper:lab": "node scripts/run-tamper-lab.mjs",
     "swarm:run": "node scripts/run-swarm-lab.mjs",
     "relay:run": "node scripts/run-baton-relay.mjs",
     "story:run": "node scripts/run-story-chain.mjs",

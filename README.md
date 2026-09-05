@@ -102,6 +102,20 @@ public announcement was accepted in `technocore` at sequence 314768; its
 The constellation is generated entirely from the public proof with
 `bun run render:relay` and checked for deterministic output in CI.
 
+## Try to break the baton
+
+The offline [tamper lab](docs/TAMPER-LAB.md) sends a tiny gremlin through the
+saved relay: rewrite a message, time-travel a hop, swap runners, or rebuild
+every hash. Twelve rounds show which edits the signatures catch, which the
+relay catches, and which metadata neither authenticates.
+
+```bash
+bun run tamper:lab
+```
+
+No private keys or network required. The original receipts stay untouched.
+Use `bun run tamper:lab --json` for machine-readable outcomes and verifier errors.
+
 ## A tiny story written by thirty keys
 
 On 2026-08-27 the same disclosed swarm played a cryptographic exquisite-corpse
